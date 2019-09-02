@@ -11,7 +11,7 @@ const Router = () => {
   return (
     <div className="Router">
         <div>
-            <Switch>
+            {/* <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/all-countries/" component={AllCountries} />
                 <Route path="/cheap-countries/" component={CheapCountries} />
@@ -19,7 +19,7 @@ const Router = () => {
                 <Route path="/countries-you-should-visit/" component={CountriesYouShouldVisit} />
                 <Route path="/expensive-countries/" component={ExpensiveCountries} />
                 <Route path="/404-not-found/" component={ErrorPage} />
-            </Switch>
+            </Switch> */}
       </div>
     </div>
   );

@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Route, Switch } from "react-router-dom";
+import Home from './components/Home';
+import AllCountries from './components/AllCountries';
+import CheapCountries from './components/CheapCountries';
+import CountriesVisited from './components/CountriesVisited';
+import CountriesYouShouldVisit from './components/CountriesYouShouldVisit';
+import ExpensiveCountries from './components/ExpensiveCountries';
+import ErrorPage from './components/ErrorPage';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Router">
+        <div>
+            <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/all-countries/" component={AllCountries} />
+                <Route path="/cheap-countries/" component={CheapCountries} />
+                <Route path="/countries-visited/" component={CountriesVisited} />
+                <Route path="/countries-you-should-visit/" component={CountriesYouShouldVisit} />
+                <Route path="/expensive-countries/" component={ExpensiveCountries} />
+                <Route path="/404-not-found/" component={ErrorPage} />
+            </Switch>
+      </div>
+    </div>
     </div>
   );
 }
